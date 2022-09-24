@@ -1,26 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Memory from "./pages/Memory";
+import Loser from "./pages/Loser";
 
-function App() {
+export interface IApplicationprops {}
+
+const App: React.FunctionComponent<IApplicationprops> = (props) => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/memory" element={<Memory />} />
+        <Route path="/loser" element={<Loser />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
