@@ -1,12 +1,12 @@
 import React from "react";
-import Cards from "../components/Cards";
+import CardsExpert from "../components/CardsExpert";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 // import LostModal from "../components/LostModal";
 // import WinModal from "../components/WinModal";
 
-import "../styles/memoryContainer.css";
+import "../styles/memoryExpertContainer.css";
 
 export interface IRenderTimeComponent {
   remainingTime: number;
@@ -42,10 +42,10 @@ const RenderTime: React.FunctionComponent<IRenderTimeComponent> = ({
 
 export interface IMemoryComponent {}
 
-const Memory: React.FunctionComponent<IMemoryComponent> = () => {
+const MemoryExpert: React.FunctionComponent<IMemoryComponent> = () => {
   return (
     <div className="memoryContainer">
-      <Cards result />
+      <CardsExpert result />
       <div className="timer-wrapper">
         <>
           <CountdownCircleTimer
@@ -63,4 +63,4 @@ const Memory: React.FunctionComponent<IMemoryComponent> = () => {
   );
 };
 
-export default Memory;
+export default MemoryExpert;

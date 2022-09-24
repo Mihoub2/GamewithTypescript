@@ -1,9 +1,11 @@
 .headerContainer {
-  background-color: red;
+  background-color: #9fbfe3;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100px;
+  justify-content: space-around;
+  border-bottom: 3px black solid;
 }
 button {
   display: inline-block;
@@ -16,5 +18,4 @@ button {
   width: 100%;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 5px;
 }

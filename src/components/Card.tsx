@@ -4,7 +4,6 @@ export interface ICardComponent {
   item: { id: number; stat: string; img: string };
   id: number;
   handleClick: (id: number) => void;
-  result: boolean;
 }
 
 const Card: React.FunctionComponent<ICardComponent> = ({

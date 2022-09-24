@@ -7,8 +7,7 @@ export interface IHomePageProps {}
 const Home: React.FunctionComponent<IHomePageProps> = (props) => {
   return (
     <div className="homeContainer">
-      HOME !
-      <Link className="" to="/memory">
+      <Link to="/memory">
         <button className="">Essaie mon jeu</button>
       </Link>
     </div>

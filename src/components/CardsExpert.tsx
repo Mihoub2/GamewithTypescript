@@ -7,7 +7,7 @@ export interface ICardsComponent {
   result: boolean;
 }
 
-const Cards: React.FunctionComponent<ICardsComponent> = (props) => {
+const CardsExpert: React.FunctionComponent<ICardsComponent> = (props) => {
   const navigate = useNavigate();
   const [items, setItems] = useState(
     [
@@ -27,6 +27,10 @@ const Cards: React.FunctionComponent<ICardsComponent> = (props) => {
       { id: 7, img: "/img/angular.png", stat: "" },
       { id: 8, img: "/img/nodejs.png", stat: "" },
       { id: 8, img: "/img/nodejs.png", stat: "" },
+      { id: 9, img: "/img/nodejs.png", stat: "" },
+      { id: 9, img: "/img/nodejs.png", stat: "" },
+      { id: 10, img: "/img/nodejs.png", stat: "" },
+      { id: 10, img: "/img/nodejs.png", stat: "" },
     ].sort(() => Math.random() - 0.5)
   );
 
@@ -93,4 +97,4 @@ const Cards: React.FunctionComponent<ICardsComponent> = (props) => {
     </div>
   );
 };
-export default Cards;
+export default CardsExpert;
