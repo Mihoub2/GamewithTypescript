@@ -1,8 +1,10 @@
 import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 import Card from "./Card";
 import "../styles/cards.css";
 
 function Cards() {
+  const navigate = useNavigate();
   const [items, setItems] = useState(
     [
       { id: 1, img: "/img/html.png", stat: "" },
@@ -78,10 +80,18 @@ function Cards() {
 
   return (
     <div className="cardContainer">
-      {items.map((item, index) => (
-        <Card key={index} item={item} id={index} handleClick={handleClick} />
-      ))}
-      {result === true ? <p>Nice</p> : <p>Raté</p>}
+      <>
+        {items.map((item, index) => (
+          <Card
+            key={index}
+            item={item}
+            id={index}
+            handleClick={handleClick}
+            result={result}
+          />
+        ))}
+        {result === true ? navigate("/winner") : ""}
+      </>
     </div>
   );
 }

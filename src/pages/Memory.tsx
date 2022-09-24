@@ -42,10 +42,11 @@ const RenderTime: React.FunctionComponent<IRenderTimeComponent> = ({
 
 export interface IMemoryComponent {}
 
-const Memory: React.FunctionComponent<IMemoryComponent> = (props) => {
+const Memory: React.FunctionComponent<IMemoryComponent> = () => {
   return (
     <div className="memoryContainer">
       <Cards />
+
       <div className="timer-wrapper">
         <CountdownCircleTimer
           isPlaying
